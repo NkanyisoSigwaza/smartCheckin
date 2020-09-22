@@ -1,117 +1,340 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Signup(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class Signup extends StatefulWidget {
+  @override
+  _SignupState createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  var _positions = [
+    "Please select",
+    "Position0",
+    "Position1",
+    "Position2",
+    "Position3"
+  ];
+
+  var _currentSelectedPosition = "Please select";
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        toolbarHeight: 60,
+        title: Container(
+          height: 45,
+          width: 1000,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "SIGN UP",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                ),
+              ]),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.blue[300],
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: Container(
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+          children: [
+            Container(
+              height: 0,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 5,
+                    color: Colors.cyan[200],
+                    spreadRadius: 5,
+                  )
+                ],
+                color: Colors.cyan[100],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 80, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Name:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: TextField(
+                      onChanged: (String str) {
+                        print(str);
+                      },
+                      showCursor: true,
+                      decoration: InputDecoration(
+                        helperText: "First Name",
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue[300])),
+                      ),
+                      //add a variable where the inputed text will go
+                    ),
+                  ),
+                  SizedBox(width: 50),
+                  Flexible(
+                    child: TextField(
+                      onChanged: (String str) {
+                        print(str);
+                      },
+                      showCursor: true,
+                      decoration: InputDecoration(
+                        helperText: "Last Name",
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue[300])),
+                      ),
+                      //add a variable where the inputed text will go
+                    ),
+                  )
+                ],
+              ),
             ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("ID / Passport:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: TextField(
+                      onChanged: (String str) {
+                        print(str);
+                      },
+                      decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.blue[300]))),
+                      showCursor: true,
+                      //add a variable where the inputed text will go
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Contact Number:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                      child: TextField(
+                    onChanged: (String str) {
+                      print(str);
+                    },
+                    showCursor: true,
+                    decoration: InputDecoration(
+                      helperText: "(+27)12 345 6789",
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.blue[300])),
+                      //add a variable where the inputed text will go
+                    ),
+                  )),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Email Address:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.blue[300]))),
+                      onChanged: (String str) {
+                        print(str);
+                      },
+
+                      showCursor: true,
+                      //add a variable where the inputed text will go
+                      //add an email address code checker
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 45, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Address:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue[300], width: 2),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: TextField(
+                        onChanged: (String str) {
+                          print(str);
+                        },
+                        showCursor: true,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                        //add a variable where the inputed text will go
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Position:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  Flexible(flex: 1, child: SizedBox(width: 150)),
+                  Flexible(
+                    fit: FlexFit.loose,
+                    child: Container(
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(0),
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2, color: Colors.blue[300]),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: DropdownButtonFormField<String>(
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(5, 2, 5, 2),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100)),
+                          enabledBorder: InputBorder.none,
+                        ),
+                        items: _positions.map((String position) {
+                          return DropdownMenuItem(
+                            value: position,
+                            child: Container(
+                              child: Text("    " + position),
+                            ),
+                          );
+                        }).toList(),
+                        value: _currentSelectedPosition,
+                        onChanged: (String newSelectedPosition) {
+                          setState(() {
+                            this._currentSelectedPosition =
+                                (newSelectedPosition != "Please select")
+                                    ? newSelectedPosition
+                                    : null;
+                          });
+                        },
+                        icon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.blue[300],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Password:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.blue[300]))),
+                      onChanged: (String str) {
+                        print(str);
+                      },
+
+                      showCursor: true,
+                      //add a variable where the inputed text will go
+                      //add an email address code checker
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 30, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Confirm Password:",
+                      style: TextStyle(fontSize: 20, letterSpacing: 1)),
+                  SizedBox(width: 20),
+                  Flexible(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.blue[300]))),
+                      onChanged: (String str) {
+                        print(str);
+                      },
+
+                      showCursor: true,
+                      //add a variable where the inputed text will go
+                      //add an email address code checker
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            FlatButton(
+                onPressed: () {
+                  print("pressed");
+                },
+                child: Container(
+                  //margin: EdgeInsets.fromLTRB(10, 30, 10, 0),
+                  //padding: EdgeInsets.fromLTRB(50, 30, 50, 30),
+                  height: 80,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Colors.blue[300],
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset(0, 8),
+                            color: Colors.cyan[200].withOpacity(0.8),
+                            spreadRadius: 0,
+                            blurRadius: 2)
+                      ]),
+                  child: Center(
+                      child: Text(
+                    "Register".toUpperCase(),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w900),
+                  )),
+                ))
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

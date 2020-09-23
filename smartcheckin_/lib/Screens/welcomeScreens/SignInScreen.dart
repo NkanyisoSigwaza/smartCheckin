@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'HomeScreen.dart';
+import 'ForgotPswd.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             FlatButton(
                               onPressed: () {
-                                //nothing happens here
+                                //nothing happens here.
                               },
                               child: Container(
                                 height: 70,
@@ -150,7 +151,7 @@ class _SignInState extends State<SignIn> {
                                   print("Hahah you forgot your Password!");
                                   Navigator.push(context,
                                       MaterialPageRoute(builder: (context) {
-                                    return HomeScreen();
+                                    return ForgotPswd();
                                   }));
                                 },
                                 child: Text(

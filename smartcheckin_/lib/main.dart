@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smartcheckin_/Screens/ManagerAnnouncements.dart';
+import 'package:smartcheckin_/Screens/ManagerCustomReport.dart';
 import 'package:smartcheckin_/Screens/ManagerReport.dart';
 
 void main() {
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ManagerReport(),
+      home: ManagerAnnouncements(),
     );
   }
 }

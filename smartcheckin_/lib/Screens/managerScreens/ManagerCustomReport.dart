@@ -206,8 +206,8 @@ class _ManagerCustomReportState extends State<ManagerCustomReport> {
                     borderRadius: BorderRadius.circular(18.0),
                     side: BorderSide(color: Colors.cyan[800])
                 ),
-                height: 50,
-                minWidth: 200,
+                //height: 50,
+                //minWidth: 200,
                 color: Colors.cyan,
                 onPressed: (){},
                 child: Text(

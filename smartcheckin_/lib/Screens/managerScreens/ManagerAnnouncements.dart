@@ -115,12 +115,13 @@ class _ManagerAnnouncementsState extends State<ManagerAnnouncements> {
           Padding(
             padding: const EdgeInsets.all(20),
             child: FlatButton(
+              
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),
-              side: BorderSide(color: Colors.cyan[800])
-          ),
-              height: 50,
-              minWidth: 200,
+                side: BorderSide(color: Colors.cyan[800])
+              ),
+              //height: 50,
+              //minWidth: 200,
               color: Colors.cyan,
                 onPressed: (){},
                 child: Text(

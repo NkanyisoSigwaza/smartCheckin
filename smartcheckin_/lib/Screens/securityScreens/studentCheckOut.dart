@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartcheckin_/Models/healthDetails.dart';
-import 'package:smartcheckin_/Screens/visitorCheckIn.dart';
+import 'package:smartcheckin_/Screens/securityScreens/visitorCheckIn.dart';
 
 class StudentCheckOut extends StatefulWidget {
   @override

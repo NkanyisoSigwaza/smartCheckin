@@ -49,8 +49,8 @@ class _ManagerReportState extends State<ManagerReport> {
                     borderRadius: BorderRadius.circular(10.0),
                     side: BorderSide(color: Colors.cyan[800])
                 ),
-                height: 50,
-                minWidth: 200,
+                //height: 50,
+                //minWidth: 200,
                 color: Colors.cyan[800],
                 onPressed: (){},
                 child: Text(
@@ -91,8 +91,8 @@ class _ManagerReportState extends State<ManagerReport> {
                               borderRadius: BorderRadius.circular(10.0),
                               side: BorderSide(color: Colors.cyan[800])
                           ),
-                          height: 50,
-                          minWidth: 300,
+                          //height: 50,
+                          //minWidth: 300,
                           color: Colors.cyan[800],
                           onPressed: (){},
                           child: Text(
@@ -131,8 +131,8 @@ class _ManagerReportState extends State<ManagerReport> {
                               borderRadius: BorderRadius.circular(10.0),
                               side: BorderSide(color: Colors.cyan[800])
                           ),
-                          height: 50,
-                          minWidth: 300,
+                          //height: 50,
+                          //minWidth: 300,
                           color: Colors.cyan[800],
                           onPressed: (){},
                           child: Text(

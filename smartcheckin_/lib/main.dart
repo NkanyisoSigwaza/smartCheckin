@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+//security screens
 import 'package:smartcheckin_/Models/healthDetails.dart';
-import 'package:smartcheckin_/Screens/studentCheckOut.dart';
-import 'package:smartcheckin_/Screens/visitorCheckIn.dart';
-import 'package:smartcheckin_/Screens/visitorCheckOut.dart';
+import 'package:smartcheckin_/Screens/securityScreens/studentCheckOut.dart';
+import 'package:smartcheckin_/Screens/securityScreens/visitorCheckIn.dart';
+import 'package:smartcheckin_/Screens/securityScreens/visitorCheckOut.dart';
 //welcome screens
 import 'Screens/welcomeScreens/HomeScreen.dart';
+//student screens
+import 'package:smartcheckin_/Screens/studentScreens/main.dart';
 //manager screens
-import 'package:smartcheckin_/Screens/ManagerAnnouncements.dart';
-// import 'package:smartcheckin_/Screens/ManagerCustomReport.dart';
-// import 'package:smartcheckin_/Screens/ManagerReport.dart';
+import 'package:smartcheckin_/Screens/managerScreens/ManagerAnnouncements.dart';
+import 'package:smartcheckin_/Screens/managerScreens/ManagerCustomReport.dart';
+import 'package:smartcheckin_/Screens/managerScreens/ManagerReport.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: StudentCheckOut(),
       routes: {
       "/studentcheckout": (context) => StudentCheckOut(),
       "/visitorcheckout": (context) => VisitorCheckOut(),
@@ -33,6 +36,9 @@ class MyApp extends StatelessWidget {
       "/healthdetails": (context) => HealthDetails(),
       "/homesccreen": (context) => HomeScreen(),
       "/managerannouncement": (context) => ManagerAnnouncements(),
+      "/managercustomer": (context) => ManagerCustomReport(),
+      "/managereport": (context) => ManagerReport(),
+      "/studentscreens": (context) => SecurityHome(),
     },
     );
   }

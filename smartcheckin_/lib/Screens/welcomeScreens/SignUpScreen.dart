@@ -25,7 +25,7 @@ class _SignupState extends State<Signup> {
             child: Scaffold(
               appBar: AppBar(
                 //add return buttonIcon
-                toolbarHeight: 60,
+                //toolbarHeight: 60,
                 title: Container(
                   height: 45,
                   width: 1000,

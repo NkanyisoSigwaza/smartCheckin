@@ -3,6 +3,8 @@ import 'package:smartcheckin_/Models/healthDetails.dart';
 import 'package:smartcheckin_/Screens/studentCheckOut.dart';
 import 'package:smartcheckin_/Screens/visitorCheckIn.dart';
 import 'package:smartcheckin_/Screens/visitorCheckOut.dart';
+//welcome screens
+import 'Screens/welcomeScreens/HomeScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: StudentCheckOut(),
+      home: HomeScreen(),
       routes: {
       "/studentcheckout": (context) => StudentCheckOut(),
       "/visitorcheckout": (context) => VisitorCheckOut(),

@@ -5,6 +5,10 @@ import 'package:smartcheckin_/Screens/visitorCheckIn.dart';
 import 'package:smartcheckin_/Screens/visitorCheckOut.dart';
 //welcome screens
 import 'Screens/welcomeScreens/HomeScreen.dart';
+//manager screens
+import 'package:smartcheckin_/Screens/ManagerAnnouncements.dart';
+// import 'package:smartcheckin_/Screens/ManagerCustomReport.dart';
+// import 'package:smartcheckin_/Screens/ManagerReport.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -26,7 +31,12 @@ class MyApp extends StatelessWidget {
       "/visitorcheckout": (context) => VisitorCheckOut(),
       "/visitorcheckin": (context) => VisitorCheckIn(),
       "/healthdetails": (context) => HealthDetails(),
+      "/homesccreen": (context) => HomeScreen(),
+      "/managerannouncement": (context) => ManagerAnnouncements(),
     },
     );
   }
 }
+
+
+

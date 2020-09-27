@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c35e2297-095c-46e5-900d-3679389183f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Health_Survey.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Health_Survey.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Logo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Logo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Resources.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Resources.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Visitors_Screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Visitors_Screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1hvXLMoD8r4cpZ9mWbvvg3I9MEC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/smartCheckin-security/smartCheckin-security/smartcheckin_" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\27820\Documents\flutterScripts\smart_checkin\lib" />
+      <recent name="C:\Users\27820\Documents\flutterScripts\smart_checkin\lib\Screens" />
+      <recent name="C:\Users\27820\Documents\flutterScripts\smart_checkin\lib\Models" />
+      <recent name="C:\Users\27820\Documents\flutterScripts\smart_checkin" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c35e2297-095c-46e5-900d-3679389183f0" name="Default Changelist" comment="" />
+      <created>1600892483846</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600892483846</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="492" y="151" width="616" height="571" key="#main.dart" timestamp="1601192316469">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="492" y="151" width="616" height="571" key="#main.dart/0.0.1600.860@0.0.1600.860" timestamp="1601192316469" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1601194051457">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601194051457" />
+    <state width="1557" height="173" key="GridCell.Tab.0.bottom" timestamp="1601221790239">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="173" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601221790239" />
+    <state width="1557" height="173" key="GridCell.Tab.0.center" timestamp="1601221790238">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="173" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601221790238" />
+    <state width="1557" height="173" key="GridCell.Tab.0.left" timestamp="1601221790238">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="173" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601221790238" />
+    <state width="1557" height="173" key="GridCell.Tab.0.right" timestamp="1601221790238">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="173" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601221790238" />
+    <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601210906914">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1601210906914" />
+    <state x="316" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1601191737116">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="316" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1601191737116" />
+  </component>
+</project>

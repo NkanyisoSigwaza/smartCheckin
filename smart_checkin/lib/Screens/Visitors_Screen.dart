@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:smart_checkin/Screens/Health_Survey.dart';
 import 'Logo.dart';
 import 'Resources.dart';
-
+import '../main.dart';
+import 'package:smart_checkin/Models/healthDetails.dart';
 
 class Visitors extends StatefulWidget {
 
   @override
   _VisitorsState createState() => _VisitorsState();
 }
-enum WhyFarther { harder, smarter, selfStarter, tradingCharter }
+
 class _VisitorsState extends State<Visitors> {
 
   //User input variables
@@ -37,13 +40,64 @@ class _VisitorsState extends State<Visitors> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Visitor CheckIn"),
+        backgroundColor: Colors.blue,
+      ),
+
+      drawer: Drawer(
+        elevation: 0.0,
+        child: ListView(
+          children: [
+            Container(
+              height: ScaleH(context, 0.05),
+              child: Center(
+                child: Text('Smart Menu',
+                  style: TextStyle(
+                      letterSpacing: 2,
+                      color: Colors.white,
+                      fontSize: 16
+                  ),),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+
+            ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(
+                          builder: (context) => StudentHome())
+                  );  //Navigator
+                }),
+
+            ListTile(
+              leading: Icon(Icons.transit_enterexit),
+              title: Text("Student CheckOut"),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(
+                        builder: (context) => Survey_page()
+                    ));
+              },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text("Exit"),
+              onTap: () {SystemNavigator.pop();},
+            )
+
+          ],
+        ),
+      ),
+
       body: ListView(
         children: [
-          SizedBox(height: ScaleH(context, 0.01), width: ScaleW(context, 1),),
-
-          Align(
-              alignment: Alignment.topLeft,
-              child: Icon(Icons.menu, size: 40, color: Colors.blue,)),
+          SizedBox(height: ScaleH(context, 0.03),),
 
           Center(child: Logo(context: context,)),
 
@@ -135,7 +189,11 @@ class _VisitorsState extends State<Visitors> {
 
           SizedBox(height: ScaleH(context, 0.05),),
           FlatButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => HealthDetails()
+              ));
+            },
 
             child: Container(
               height: ScaleH(context, 0.09),
@@ -155,11 +213,7 @@ class _VisitorsState extends State<Visitors> {
               ),
             ),
           ),
-
-
         ],),
-
-
     );
   }
 }

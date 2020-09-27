@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Health_Survey.dart';
-import 'Logo.dart';
-import 'Visitors_Screen.dart';
+import 'Screens/Health_Survey.dart';
+import 'Screens/Logo.dart';
+import 'Screens/Visitors_Screen.dart';
 
 void main() => runApp(MaterialApp(
-  home: SecurityHome(),
+  home: StudentHome(),
 ));
 
-class SecurityHome extends StatelessWidget {
+class StudentHome extends StatelessWidget {
 
   //Method to get screen width
   double ScaleW(BuildContext context, double num)
@@ -44,7 +44,7 @@ class SecurityHome extends StatelessWidget {
             height: ScaleH(context, 0.05),
           ),
 
-          Logo(context: context,),
+          Logo(context: context),
 
           SizedBox(height: ScaleH(context, 0.05),),
 

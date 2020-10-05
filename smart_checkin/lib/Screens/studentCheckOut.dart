@@ -13,19 +13,6 @@ class StudentCheckOut extends StatefulWidget {
 
 class _StudentCheckOutState extends State<StudentCheckOut> {
 
-  //Method to get screen width
-  double ScaleW(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.width * num;
-
-  }
-
-  //Method to get screen height
-  double ScaleH(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.height * num;
-
-  }
 
   //personal details form variables
   String fullName, studentNo, address, contactNo;
@@ -118,7 +105,7 @@ class _StudentCheckOutState extends State<StudentCheckOut> {
           children: <Widget>[
             Text("Student checkout"),
 
-            Tools().Logo(context: context),
+            Resources().logo(context: context),
 
           ],
         ),
@@ -129,7 +116,7 @@ class _StudentCheckOutState extends State<StudentCheckOut> {
         child: ListView(
           children: [
             Container(
-              height: ScaleH(context, 0.05),
+              height: Resources().scaleH(context, 0.05),
               child: Center(
                 child: Text('Smart Menu',
                   style: TextStyle(
@@ -254,7 +241,7 @@ class _StudentCheckOutState extends State<StudentCheckOut> {
                       student["address"]=address;
                       student["contactno"]=contactNo;
 
-                      Tools().Confirmation(context, "Student", "Out");
+                      Resources().confirmation(context, "Student", "Out");
 
                       //Navigator.pushNamed(context, "/visitorcheckin");
                       //here we can now use the declared variables later

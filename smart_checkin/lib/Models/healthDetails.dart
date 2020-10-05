@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'file:///C:/Users/27820/Documents/flutterScripts/smart_checkin/lib/main.dart';
+import 'package:smart_checkin/main.dart';
 import 'package:smart_checkin/Screens/Visitors_Screen.dart';
 import 'package:smart_checkin/Screens/Resources.dart';
 
@@ -15,21 +15,6 @@ class HealthDetails extends StatefulWidget {
 }
 
 class _HealthDetailsState extends State<HealthDetails> {
-
-
-  //Method to get screen width
-  double ScaleW(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.width * num;
-
-  }
-
-  //Method to get screen height
-  double ScaleH(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.height * num;
-
-  }
 
   //health details form variables
   double temperature = 0; //keep the entered temperature here
@@ -148,7 +133,7 @@ class _HealthDetailsState extends State<HealthDetails> {
           children: <Widget>[
             Text("COVID-19 Health Check"),
             FlatButton(
-              child: Tools().Logo(context: context),
+              child: Resources().logo(context: context),
               onPressed: () {},
             )
           ],
@@ -160,7 +145,7 @@ class _HealthDetailsState extends State<HealthDetails> {
         child: ListView(
           children: [
             Container(
-              height: ScaleH(context, 0.05),
+              height: Resources().scaleH(context, 0.05),
               child: Center(
                 child: Text('Smart Menu',
                   style: TextStyle(
@@ -226,7 +211,7 @@ class _HealthDetailsState extends State<HealthDetails> {
                 }
                 _tempKey.currentState.save();
 
-                Tools().Confirmation(context, "Student", "Out");
+                Resources().confirmation(context, "Student", "Out");
                 //here we can now use the declared variables later
               },
             ),

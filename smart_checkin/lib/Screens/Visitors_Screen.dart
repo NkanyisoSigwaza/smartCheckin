@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:smart_checkin/Screens/Health_Survey.dart';
+import 'package:smart_checkin/Screens/Survey_page.dart';
 import 'Logo.dart';
 import 'Resources.dart';
 import '../main.dart';
@@ -14,27 +14,161 @@ class Visitors extends StatefulWidget {
 
 class _VisitorsState extends State<Visitors> {
 
+  //form key for validating form
+  final _formKey = GlobalKey<FormState>();
+
   //User input variables
   String _surname;
   String _name;
-  String _ID;
+  String _id;
   String _email;
   String _contact;
   String _residence;
-  var _selection;
 
-  //Get Screen width for compatability with different devices
-  double ScaleW(BuildContext context, double num)
+  Widget nameInput()
   {
-    return MediaQuery.of(context).size.width * num;
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Full name required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _name;
+        },
 
+
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
   }
 
-  //Get Screen height for compatability with different devices
-  double ScaleH(BuildContext context, double num)
+  Widget surnameInput()
   {
-    return MediaQuery.of(context).size.height * num;
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Surname required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _surname;
+        },
 
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget studentInput()
+  {
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Student/ID/Emplyee no. required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _id;
+        },
+
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget emailInput()
+  {
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Email address is required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _email;
+        },
+
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget contactInput()
+  {
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Contact number is required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _contact;
+        },
+
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget residentInput()
+  {
+    return Expanded(
+      child: TextFormField(
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Building name is required";
+          }
+          return null;
+        },
+        onChanged: (String input) {
+          input = _residence;
+        },
+
+
+        showCursor: true,
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide:  BorderSide(color: Colors.blue)
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -50,7 +184,7 @@ class _VisitorsState extends State<Visitors> {
         child: ListView(
           children: [
             Container(
-              height: ScaleH(context, 0.05),
+              height: Resources().scaleH(context, 0.05),
               child: Center(
                 child: Text('Smart Menu',
                   style: TextStyle(
@@ -80,7 +214,7 @@ class _VisitorsState extends State<Visitors> {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(
-                        builder: (context) => Survey_page()
+                        builder: (context) => SurveyPage()
                     ));
               },
             ),
@@ -97,16 +231,16 @@ class _VisitorsState extends State<Visitors> {
 
       body: ListView(
         children: [
-          SizedBox(height: ScaleH(context, 0.03),),
+          SizedBox(height: Resources().scaleH(context, 0.03),),
 
           Center(child: Logo(context: context,)),
 
-          SizedBox(height: ScaleH(context, 0.03),),
+          SizedBox(height: Resources().scaleH(context, 0.03),),
 
           Container(
             color: Colors.blue,
-            width: ScaleW(context, 1,),
-            height: ScaleH(context, 0.08),
+            width: Resources().scaleW(context, 1,),
+            height: Resources().scaleH(context, 0.08),
             child: Center(
               child: Text("VISITORS INFORMATION",
                 style:  TextStyle(
@@ -121,83 +255,81 @@ class _VisitorsState extends State<Visitors> {
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: Container(
-              width: ScaleW(context, 1),
-              height: ScaleH(context, 0.4),
+              width: Resources().scaleW(context, 1),
+              height: Resources().scaleH(context, 0.4),
               child: Form(
-                child: ListView(
+                child: Form(
+                  key: _formKey,
+                  child: ListView(
 
-                  children: [
-                    Row(
-                      children: [
-                        Tools().Dtext(label: "Name"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                    children: [
+                      Row(
+                        children: [
+                          Resources().formLabel(label: "Name"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
+                          nameInput()
+                        ]),
 
-                        Tools().userInput(
-                            variable: _name)
-                      ]),
+                      Row(
+                        children: [
+                          Resources().formLabel(label: "Surname"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
 
-                    Row(
-                      children: [
-                        Tools().Dtext(label: "Surname"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                          surnameInput()
+                        ],),
 
-                        Tools().userInput(
-                            variable: _surname)
-                      ],),
+                      Row(
+                        children: [
+                          Resources().formLabel(label: "Student ID/ID\nEmployee Number"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
 
-                    Row(
-                      children: [
-                        Tools().Dtext(label: "Student ID/ID\nEmployee Number"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                          studentInput()
+                        ],),
 
-                        Tools().userInput(
-                            variable: _ID)
-                      ],),
+                      Row(
+                        children: [
+                          Resources().formLabel(label: "Email Address"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
 
-                    Row(
-                      children: [
-                        Tools().Dtext(label: "Email Address"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                          emailInput()
+                        ],),
 
-                        Tools().userInput(
-                            variable: _email)
-                      ],),
+                      Row(
+                        children: [
+                          Resources().formLabel(label: "Contact Number"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
 
-                    Row(
-                      children: [
-                        Tools().Dtext(label: "Contact Number"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                          contactInput()
+                        ],),
 
-                        Tools().userInput(
-                            variable: _contact)
-                      ],),
+                      Row(
+                        children: [
+                        Resources().formLabel(label: "Place of Residence"),
+                          SizedBox(width: Resources().scaleH(context, 0.05),),
 
-                    Row(
-                      children: [
-                      Tools().Dtext(label: "Place of Residence"),
-                        SizedBox(width: ScaleH(context, 0.05),),
+                          residentInput()
+                        ],),
 
-                        Tools().userInput(
-                            variable: _contact)
-                      ],),
-
-                    SizedBox(height: 20,)
-                  ],),
+                      SizedBox(height: 20,)
+                    ],),
+                ),
               ),
             ),
           ),
 
-          SizedBox(height: ScaleH(context, 0.05),),
+          SizedBox(height: Resources().scaleH(context, 0.05),),
           FlatButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) => HealthDetails()
-              ));
+              if (_formKey.currentState.validate()) {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => HealthDetails()
+                ));
+              }
             },
 
             child: Container(
-              height: ScaleH(context, 0.09),
-              width: ScaleW(context, 0.7),
+              height: Resources().scaleH(context, 0.09),
+              width: Resources().scaleW(context, 0.7),
               decoration: BoxDecoration(
                   color: Colors.blue[500],
                   borderRadius:  BorderRadius.circular(10),

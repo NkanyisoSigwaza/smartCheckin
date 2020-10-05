@@ -2,54 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'file:///C:/Users/27820/Documents/flutterScripts/smart_checkin/lib/main.dart';
 
-class Tools
+class Resources
 {
 
-
-  String _selection;
-
   //Method to get screen width
-  double ScaleW(BuildContext context, double num)
+  double scaleW(BuildContext context, double num)
   {
     return MediaQuery.of(context).size.width * num;
 
   }
 
   //Method to get screen height
-  double ScaleH(BuildContext context, double num)
+  double scaleH(BuildContext context, double num)
   {
     return MediaQuery.of(context).size.height * num;
 
   }
 
-  //Entry filed for user input
-  Widget userInput({String variable})
-  {
-    return Expanded(
-      child: TextFormField(
-        validator: (String value) {
-          if (value.isEmpty) {
-            return variable.substring(1) + " is required";
-          }
-          return null;
-        },
-        onChanged: (String input) {
-          variable = input;
-        },
-
-
-        showCursor: true,
-        decoration: InputDecoration(
-          enabledBorder: UnderlineInputBorder(
-              borderSide:  BorderSide(color: Colors.blue)
-          ),
-        ),
-      ),
-    );
-  }
-
   //method for displaying form text
-  Widget Dtext({String label})
+  Widget formLabel({String label})
   {
     return Text(label,
     style: TextStyle(
@@ -61,7 +32,7 @@ class Tools
   }
 
   //pop up box to confirm user data
-  Widget Confirmation(context,String person, String status)
+  Widget confirmation(context,String person, String status)
   {
     showDialog(
         context: context,
@@ -69,7 +40,7 @@ class Tools
           return AlertDialog(
 
               content: Container(
-                height: ScaleH(context, 0.5),
+                height: scaleH(context, 0.5),
                 color: Colors.blue[200],
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -81,7 +52,7 @@ class Tools
 
                       Text("Please proceed to security and present this notification"),
 
-                      SizedBox(height: ScaleH(context, 0.2),),
+                      SizedBox(height: scaleH(context, 0.2),),
 
                       RaisedButton(
                         child: Text("Done"),
@@ -101,7 +72,8 @@ class Tools
   }
 
   BuildContext context;
-  Widget Logo({context})
+
+  Widget logo({context})
   {
     return Stack(
         children: [Container(

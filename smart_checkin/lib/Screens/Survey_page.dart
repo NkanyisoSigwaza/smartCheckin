@@ -4,22 +4,10 @@ import 'package:smart_checkin/Screens/studentCheckOut.dart';
 import 'Logo.dart';
 import '../main.dart';
 import 'Visitors_Screen.dart';
+import 'Resources.dart';
 
-class Survey_page extends StatelessWidget {
+class SurveyPage extends StatelessWidget {
 
-  //Method to get screen width
-  double ScaleW(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.width * num;
-
-  }
-
-  //Method to get screen height
-  double ScaleH(BuildContext context, double num)
-  {
-    return MediaQuery.of(context).size.height * num;
-
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +22,7 @@ class Survey_page extends StatelessWidget {
         child: ListView(
           children: [
             Container(
-              height: ScaleH(context, 0.05),
+              height: Resources().scaleH(context, 0.05),
               child: Center(
                 child: Text('Smart Menu',
                 style: TextStyle(
@@ -83,14 +71,14 @@ class Survey_page extends StatelessWidget {
       children: [
 
 
-        SizedBox(height: ScaleH(context, 0.05), width: ScaleW(context, 1),),
+        SizedBox(height: Resources().scaleH(context, 0.05), width: Resources().scaleW(context, 1),),
 
         Logo(context: context),
 
         Container(
           color: Colors.blue,
-          width: ScaleW(context, 1,),
-          height: ScaleH(context, 0.08),
+          width: Resources().scaleW(context, 1,),
+          height: Resources().scaleH(context, 0.08),
           child: Center(
             child: Text("HEALTH SURVEY",
               style:  TextStyle(
@@ -101,11 +89,11 @@ class Survey_page extends StatelessWidget {
           ),
         ),
 
-        SizedBox(height: ScaleH(context, 0.05),),
+        SizedBox(height: Resources().scaleH(context, 0.05),),
 
         Container(
-          width: ScaleW(context, 0.9),
-          height: ScaleH(context, 0.2),
+          width: Resources().scaleW(context, 0.9),
+          height: Resources().scaleH(context, 0.2),
           child: Text("These checks are conducted to ensure the"
               "health and safety of all our students. Should you"
               "answer yes to the below, you will be reffered to"
@@ -119,7 +107,7 @@ class Survey_page extends StatelessWidget {
         ),
 
 
-        SizedBox(height: ScaleH(context, 0.05),),
+        SizedBox(height: Resources().scaleH(context, 0.05),),
 
         FlatButton(
           onPressed: (){
@@ -130,8 +118,8 @@ class Survey_page extends StatelessWidget {
           },
 
           child: Container(
-            height: ScaleH(context, 0.09),
-            width: ScaleW(context, 0.7),
+            height: Resources().scaleH(context, 0.09),
+            width: Resources().scaleW(context, 0.7),
             decoration: BoxDecoration(
                 color: Colors.blue[500],
                 borderRadius:  BorderRadius.circular(10),

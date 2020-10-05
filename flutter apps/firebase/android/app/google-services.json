@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "684117078845",
+    "firebase_url": "https://testingapp-cb114.firebaseio.com",
+    "project_id": "testingapp-cb114",
+    "storage_bucket": "testingapp-cb114.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684117078845:android:2700bf4a71a0f0aa7b8b54",
+        "android_client_info": {
+          "package_name": "com.Tadaa.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684117078845-1g7f8scqpgg0ptd8jikmvmdfjhg6spup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADRTwvi5mkHbDSUA9NhAorcSAaSVLSkV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684117078845-1g7f8scqpgg0ptd8jikmvmdfjhg6spup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

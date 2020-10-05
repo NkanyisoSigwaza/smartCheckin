@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
 
-  BuildContext context;
-  double Width;
-  double Height;
-  Logo({this.context}){}
+  Logo({context});
+
   @override
   Widget build(BuildContext context) {
     return
@@ -38,7 +36,7 @@ class Logo extends StatelessWidget {
                     fontSize: 26,
                 ),))
         ],
-      );;
+      );
   }
 }
 

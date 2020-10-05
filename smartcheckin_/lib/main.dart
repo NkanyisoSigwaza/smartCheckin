@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 //security screens
 import 'package:smartcheckin_/Models/healthDetails.dart';
+import 'package:smartcheckin_/Screens/DummyScreen.dart';
 import 'package:smartcheckin_/Screens/securityScreens/studentCheckOut.dart';
 import 'package:smartcheckin_/Screens/securityScreens/visitorCheckIn.dart';
 import 'package:smartcheckin_/Screens/securityScreens/visitorCheckOut.dart';
+import 'package:smartcheckin_/States/DummyState.dart';
 //welcome screens
 import 'Screens/welcomeScreens/HomeScreen.dart';
 //student screens
@@ -28,7 +31,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: StudentCheckOut(),
+      home: ChangeNotifierProvider.value(
+        value: DummyState(),
+          child: DummyScreen()
+      ),
       routes: {
       "/studentcheckout": (context) => StudentCheckOut(),
       "/visitorcheckout": (context) => VisitorCheckOut(),

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750512346049",
+    "firebase_url": "https://smartcheckin-63638.firebaseio.com",
+    "project_id": "smartcheckin-63638",
+    "storage_bucket": "smartcheckin-63638.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750512346049:android:76e39f735561e4b5f8d540",
+        "android_client_info": {
+          "package_name": "com.example.smartcheckin_"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750512346049-4vqb9kjmj95k5r8dmkp27nrqi5t6m5ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC967r9YKUx3RNy8zRrhGHySkIxEHCU3GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750512346049-4vqb9kjmj95k5r8dmkp27nrqi5t6m5ph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 
 class DummyState with ChangeNotifier{
 
+
   TextEditingController name = TextEditingController();
   TextEditingController Surname = TextEditingController();
   TextEditingController email = TextEditingController();
@@ -12,14 +13,17 @@ class DummyState with ChangeNotifier{
   }
 
   updateClicked(){
-    print(name.text);
+    print(name);
+    name.text = "My name";
+    notifyListeners();
+
     print(Surname.text);
     print(email.text);
   }
 
   updateUserInfo() async{
 
-    await Firestore.instance.collection("Users").add({
+    await FirebaseFirestore.instance.collection("Users").add({
       "name":name.text,
       "surname": Surname.text,
       "email":email.text,

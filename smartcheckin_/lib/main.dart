@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //security screens
@@ -16,7 +17,9 @@ import 'package:smartcheckin_/Screens/managerScreens/ManagerAnnouncements.dart';
 import 'package:smartcheckin_/Screens/managerScreens/ManagerCustomReport.dart';
 import 'package:smartcheckin_/Screens/managerScreens/ManagerReport.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -31,10 +34,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChangeNotifierProvider.value(
-        value: DummyState(),
-          child: DummyScreen()
-      ),
+      home: ManagerCustomReport(),
       routes: {
       "/studentcheckout": (context) => StudentCheckOut(),
       "/visitorcheckout": (context) => VisitorCheckOut(),

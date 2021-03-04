@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c35e2297-095c-46e5-900d-3679389183f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../flutter apps/colaborate" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter apps/colaborate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,29 +64,29 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601194051457" />
-    <state width="1557" height="172" key="GridCell.Tab.0.bottom" timestamp="1601922829265">
+    <state width="1180" height="170" key="GridCell.Tab.0.bottom" timestamp="1602159549587">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="172" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601922829265" />
-    <state width="1557" height="172" key="GridCell.Tab.0.center" timestamp="1601922829265">
+    <state width="1180" height="170" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602159549587" />
+    <state width="1180" height="170" key="GridCell.Tab.0.center" timestamp="1602159549586">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="172" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601922829265" />
-    <state width="1557" height="172" key="GridCell.Tab.0.left" timestamp="1601922829265">
+    <state width="1180" height="170" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602159549586" />
+    <state width="1180" height="170" key="GridCell.Tab.0.left" timestamp="1602159549586">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="172" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601922829265" />
-    <state width="1557" height="172" key="GridCell.Tab.0.right" timestamp="1601922829265">
+    <state width="1180" height="170" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602159549586" />
+    <state width="1180" height="170" key="GridCell.Tab.0.right" timestamp="1602159549587">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="172" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601922829265" />
+    <state width="1180" height="170" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602159549587" />
     <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601210906914">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1601210906914" />
-    <state x="316" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1602079331169">
+    <state x="316" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1602080250013">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="316" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1602079331169" />
+    <state x="316" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1602080250013" />
   </component>
 </project>
